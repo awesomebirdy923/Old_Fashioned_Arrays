@@ -1,6 +1,7 @@
 package _01_array_manipulation;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -49,6 +50,8 @@ public class ArrayManipulation {
 		assertEquals(3, testArray[5]);
 	}
 
+	
+	
 	@Test
 	public void testInsertIntoRandomArray() {
 		int[] testArray = new int[100];
@@ -78,7 +81,6 @@ public class ArrayManipulation {
 		assertArrayEquals(
 			new String[] {
 				"aardvark",
-				"absorbed",
 				"affected",
 				"concerned",
 				"curious",
@@ -89,7 +91,7 @@ public class ArrayManipulation {
 				"nosy",
 				"snoopy"
 			},
-			outputArray
+		outputArray
 		);
 	}
 
@@ -145,6 +147,10 @@ public class ArrayManipulation {
 			},
 			outputArray
 		);
+	}
+	
+	private void assertArrayEquals(String s[], String s1[]) {
+		assertArrayEquals(s, s1);
 	}
 	
 	@Test
