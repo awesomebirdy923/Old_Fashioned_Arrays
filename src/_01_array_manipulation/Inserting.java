@@ -16,7 +16,7 @@ public class Inserting {
 			newList[i] = list[i];
 		}
 		
-		newList[list.length] = s;
+		newList[newList.length] = s;
 		
 		Sorting.sort(newList);
 		

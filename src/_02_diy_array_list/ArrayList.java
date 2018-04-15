@@ -20,7 +20,7 @@ public class ArrayList<T>{
 	}
 	
 	public void addAt(int index, T var) {
-		T[] newList = (T[]) new Object[list.length-1];
+		T[] newList = (T[]) new Object[list.length+1];
 		boolean passed = false;
 			for (int j = 0; j < newList.length; j++) {
 				
@@ -36,6 +36,9 @@ public class ArrayList<T>{
 				}
 			}
 		list = newList;
+		for (int i = 0; i < newList.length; i++) {
+			System.out.println(newList[i]);
+		}
 	}
 	
 	public void set(int i, T var){
