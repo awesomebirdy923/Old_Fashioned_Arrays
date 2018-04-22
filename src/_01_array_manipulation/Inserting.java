@@ -1,6 +1,6 @@
 package _01_array_manipulation;
 
-
+import java.util.Arrays;
 
 public class Inserting {
 	
@@ -13,10 +13,11 @@ public class Inserting {
 		String[] newList = new String[list.length+1];
 		
 		for (int i = 0; i < list.length; i++) {
+//			System.out.println(i);
 			newList[i] = list[i];
 		}
 		
-		newList[newList.length] = s;
+		newList[newList.length-1] = s;
 		
 		Sorting.sort(newList);
 		
