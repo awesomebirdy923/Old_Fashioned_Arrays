@@ -48,6 +48,7 @@ public class ArrayManipulation {
 	public void testInsertIntoArray() {
 		int[] testArray = { 3, 6, 8, 3, 3, 2, 98 };
 		testArray = Inserting.insertAt(testArray, 5, 3);
+		System.out.println(testArray.toString());
 		assertEquals(3, testArray[0]);
 		assertEquals(3, testArray[4]);
 		assertEquals(3, testArray[5]);
@@ -68,8 +69,8 @@ public class ArrayManipulation {
 			assertEquals(inputArrayCopy[i], actualOutputArray[i]);
 		}
 		for (int i = 74; i < 101; ++ i) {
-			//System.out.println(inputArrayCopy[i-1] + " " + actualOutputArray[i]);
-			//assertEquals(inputArrayCopy[i-1], actualOutputArray[i]);
+//			System.out.println(inputArrayCopy[i-1] + " " + actualOutputArray[i]);
+			assertEquals(inputArrayCopy[i-1], actualOutputArray[i]);
 		}
 	}
 
@@ -171,6 +172,7 @@ public class ArrayManipulation {
 		String[] outputArray =
 			Inserting.insertAlphabetically(orderedArray, "groovy");
 		for (int i = 0; i < 100; i++) {
+			System.out.println(outputArray[i]);
 			assertTrue(outputArray[i].compareTo(outputArray[i+1]) <= 0);
 		}
 	}
